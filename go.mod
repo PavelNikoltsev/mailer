@@ -1,4 +1,4 @@
-module jija
+module mailer
 
 go 1.22.0
 

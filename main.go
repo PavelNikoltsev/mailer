@@ -1,6 +1,6 @@
 package main
 
-import "jija/app"
+import "mailer/app"
 
 func main() {
 	a := app.App{}

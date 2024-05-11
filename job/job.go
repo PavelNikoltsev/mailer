@@ -17,9 +17,7 @@ type Job struct {
 
 func (j *Job) JobInit() {
 	// Create a new cron job
-
 	j.CronJob = cron.New()
-
 	// Add a cron job to execute every second
 	j.cronJobEntry, _ = j.CronJob.AddFunc("@every 1s", func() {
 		fmt.Println("Cron job executed at:", time.Now())

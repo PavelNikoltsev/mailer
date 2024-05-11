@@ -2,7 +2,7 @@ package app
 
 import (
 	"fmt"
-	"jija/job"
+	"mailer/job"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -16,12 +16,9 @@ type App struct {
 func (a *App) Init() {
 	a.Router = gin.Default()
 	a.Cron = &job.Job{}
-
 	a.Cron.JobInit()
-
 	a.InitRoutes()
 
-	fmt.Println(12345, a.Cron.CronJob)
 	if err := a.Router.Run(":8080"); err != nil {
 		fmt.Println("Error starting Gin server:", err)
 	}
